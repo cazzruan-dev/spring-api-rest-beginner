@@ -23,7 +23,6 @@ public class Comentario {
     private LocalDateTime dataPublicacao;
 
     @ManyToOne
-    @Column(nullable = false)
     @NotNull(message = "{ordemservico.not.null}")
     private OrdemServico ordemServico;
 }
