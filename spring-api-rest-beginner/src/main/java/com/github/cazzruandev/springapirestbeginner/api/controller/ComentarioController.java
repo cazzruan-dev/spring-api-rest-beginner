@@ -1,6 +1,5 @@
 package com.github.cazzruandev.springapirestbeginner.api.controller;
 
-import com.github.cazzruandev.springapirestbeginner.api.representationmodel.input.ComentarioInput;
 import com.github.cazzruandev.springapirestbeginner.api.representationmodel.output.ComentarioOutput;
 import com.github.cazzruandev.springapirestbeginner.domain.model.Comentario;
 import org.modelmapper.ModelMapper;
