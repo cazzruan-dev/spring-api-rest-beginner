@@ -3,6 +3,8 @@ package com.github.cazzruandev.springapirestbeginner.domain.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Data
@@ -14,6 +16,7 @@ public class Comentario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "{desc.not.blank}")
     private String descricao;
 
     @Column(nullable = false)
@@ -21,5 +24,6 @@ public class Comentario {
 
     @ManyToOne
     @Column(nullable = false)
+    @NotNull(message = "{ordemservico.not.null}")
     private OrdemServico ordemServico;
 }
