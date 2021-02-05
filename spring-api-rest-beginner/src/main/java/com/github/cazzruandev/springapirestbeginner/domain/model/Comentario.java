@@ -1,5 +1,6 @@
 package com.github.cazzruandev.springapirestbeginner.domain.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -10,6 +11,7 @@ import java.time.LocalDateTime;
 @Data
 @Entity
 @Table(name = "comentarios")
+@AllArgsConstructor
 public class Comentario {
 
     @Id
@@ -25,4 +27,5 @@ public class Comentario {
     @ManyToOne
     @NotNull(message = "{ordemservico.not.null}")
     private OrdemServico ordemServico;
+
 }

@@ -10,13 +10,13 @@ import java.math.BigDecimal;
 @Data
 public class OrdemServicoInput {
 
-    @NotBlank
+    @NotBlank(message = "{desc.not.blank}")
     private String descricao;
 
-    @NotNull
+    @NotNull(message = "{preco.not.null}")
     private BigDecimal preco;
 
     @Valid
-    @NotNull
+    @NotNull(message = "{cliente.not.null}")
     private ClienteIdentityInput cliente;
 }
